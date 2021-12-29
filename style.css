@@ -1,6 +1,17 @@
 html {
-　font-size:14px;
-　-webkit-text-size-adjust:100;
+　-webkit-text-size-adjust: 100%;
+　display: block;
+}
+
+script{
+  display: none;
+}
+
+＊,＊::before,＊::after{
+  word-break:break-all;
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
 }
 
 meta{
@@ -29,6 +40,21 @@ body{
   padding-bottom:20px;
 }
 
+@media screen and (max-width: 767px){
+  .Header{
+    padding-top:15px;
+    padding-bottom:15px;
+  }
+}
+
+@media screen and (max-width: 1080px){
+  .Header{
+    background-color: #fff;
+    z-index:10;
+  }
+  
+}
+
 .HeaderContainer{
   display: flex;
   justify-content:space-between;
@@ -37,8 +63,20 @@ body{
   position: relative;
 }
 
+@media screen and (max-width: 767px){
+  .HeaderContainer{
+    max-width:100%;
+    margin:0 20px;
+  }
+}
+
 .HeaderContainer>＊:last-child{
   display:inline-flex;
+}
+
+a{
+  color: #333333;
+  text-decoration:none;
 }
 
 @media screen and (min-width: 768px){
@@ -47,25 +85,104 @@ body{
 }
 }
 
-a{
-  color: #333333;
-  text-decoration:none;
+img{
+  border:0;
+  vertical-align:middle;
 }
 
-.HeaderLogo__image{
-  display:block;
+.HeaderLogo__image--pc{
+  display: block;
   height:20px;
   width:auto;
+}
+
+@media screen and (max-width: 767px){
+  .HeaderLogo__image--pc{
+    display:none;
+  }
+}
+
+.HeaderLogo__image--sp{
+  display: none;
+  height:16px;
+
+}
+
+@media screen and (max-width: 767px){
+  .HeaderLogo__image--sp{
+    display:block;
+  }
 }
 
 .HeaderNavHamburger{
   display:none;
 }
 
+@media screen and (max-width: 1080px){
+  .HeaderNavHamburger{
+    cursor:pointer;
+    display:block;
+    position:relative;
+    width:30px;
+    height:21px;
+    z-index:100;
+  }
+}
+
+@media screen and (max-width: 1080px){
+  .HeaderNavHamburger__line:first-child{
+    top:0;
+  }
+}
+
+@media screen and (max-width: 1080px){
+  .HeaderNavHamburger__line{
+    position:absolute;
+    top:50%;
+    display:block;
+    width:100%;
+    height:3px;
+    background-color:#333333;
+    transform:translate(0, -50%);
+    border-radius:10px;
+    transition:top 0.2s, transform 0.2s, opacity 0.3s;
+  }
+}
+
+@media screen and (max-width: 1080px){
+  .HeaderNavHamburger__line:last-child{
+    top:100%;
+  }
+}
+
 .HeaderNavList{
   align-items:center;
   display:flex;
   justify-content:space-between;
+}
+
+@media screen and (max-width: 767px){
+  .HeaderNavList{
+  top:52px;    
+  }
+}
+
+@media screen and (max-width: 1080px){
+  .HeaderNavList{
+    overflow-y:scroll;
+    position:fixed;
+    top:60px;
+    left:100%;
+    width:100%;
+    display:block;
+    padding-top:20px;
+    padding-bottom:75px;
+    transition:transform 0.5s;
+    z-index:99;
+    background-color: rgba(0, 0, 0, 0.8);
+    -webkit-overflow-scrolling:touch;
+    height:100%;
+}
 }
 
 ul, ol{
@@ -136,6 +253,7 @@ ul, ol{
 main{
   display: block;
 }
+
 .FirstView{
   background-image:url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/top-hero.jpg);
   background-size: cover;
@@ -144,8 +262,22 @@ main{
   padding-bottom: 28px;
 }
 
+@media screen and (max-width: 767px){
+  .FirstView{
+    background-image:none;
+    padding-top:0;
+    padding-bottom:35px;
+  }
+}
+
 .FirstView__main-image--sp{
   display:none;
+}
+
+@media screen and (max-width: 767px){
+  .FirstView__main-image--sp{
+    display:block;
+  }
 }
 
 .FirstView__main-image{
