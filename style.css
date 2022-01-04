@@ -359,7 +359,7 @@ body, div, p, ul, ol, li, dl, dt, dd, table, th, td, img, figure, h1, h2, h3, h4
 
 .FirstViewContent__title{
   color: #333333;
-  font-family:'Lato', sans-serif;
+  font-family:"Lato", sans-serif;
   font-size:38px;
   font-weight: 700;
   line-height:54px;
@@ -392,17 +392,6 @@ body, div, p, ul, ol, li, dl, dt, dd, table, th, td, img, figure, h1, h2, h3, h4
   width: 306px;
 }
 
-.FirstViewContent__buttons a:last-of-type{
-  background-color: #fff;
-  border:1px solid #E0E0E0;
-  color: #333333;
-  width: 176px;
-}
-
-.FirstViewContent__buttons a{
-  transition: opacity 0.2s;
-}
-
 .FirstViewContent__buttons a{
   align-items:　center;
   background-color: #F79214;
@@ -420,9 +409,34 @@ body, div, p, ul, ol, li, dl, dt, dd, table, th, td, img, figure, h1, h2, h3, h4
   height: 64px;
 }
 
+.FirstViewContent__buttons a{
+  transition: opacity 0.2s;
+}
+
+@media screen and (min-width: 768px) {
+ .FirstViewContent_buttons a {
+  transition: opacity 0.2s;
+ }
+}
+
+.FirstViewContent__buttons a:last-of-type{
+  background-color: #fff;
+  border:1px solid #E0E0E0;
+  color: #333333;
+  width: 176px;
+}
+
+
 .FirstViewCaption{
   color: #A2A2A4;
   font-size: 12px;
+}
+
+p {
+ line-height: 1.5;
+}
+p {
+ color: #333333;
 }
 
 .FirstViewCaption a{
@@ -438,6 +452,12 @@ a{
   padding:45px 0;
 }
 
+@media screen and (max-width: 767px) {
+ .AboutWrapper{
+  padding: 30px 0;
+ }
+}
+
 .About{
   max-width: 1114px;
   padding-left: 50px;
@@ -450,68 +470,160 @@ a{
   justify-content:space-between;
 }
 
-.About__title{
-  display: flex;
+@media screen and (max-width:767px) {
+ .About{
+  max-width: none;
+  padding-left: 20px;
+  padding-right: 20px;
+ }
+}
+
+@media screen and (max-width: 1024px) {
+.About{
   flex-direction: column;
+ }
+}
+
+.About__title{
+  align-items: center;
+  display:flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+  width: 100%;
   align-items: flex-start;
-  margin-bottom: 0;
+  margin-bottom:0;
   width:53%;
 }
 
-.About__title h2{
+@media screen and (max-width: 767px) {
+.About__title{
+  margin-bottom: 40px;
+ }
+}
+
+@media screen and (max-width: 1024px) {
+.About__title{
+  margin-bottom: 0;
+  width: 100%;
+ }
+}
+
+.About__title h2 {
   font-size: 40px;
   letter-spacing: 1px;
   width: 100%;
-  font-weight:700;
-  line-height: 74px;
+}
+
+.About__title h2 {
+ font-size: 46px;
+ font-weight: 700;
+ line-height: 74px;
 }
 
 .About__title h2, .About__title p{
  color: #fff;
- text-align:left;
+ text-align: left;
+}
+
+@media screen and (max-width: 767px) {
+.About__title h2{
+  font-size: 30px !important;
+  line-height: 1.2;
+  text-align: center;
+ }
+}
+
+@media screen and (max-width: 767px) {
+.About__title h2 {
+font-size: 30px !important;
+text-align: center;
+ }
 }
 
 .About__title h2>span{
   font-size: 50px;
-  font-family: 'Lato', sans-serif;
+  font-family:'Lato', sans-serif;
   font-weight: 900;
+}
+
+@media screen and (max-width:767px) {
+.About__title h2>span{
+  font-size: 33px;
+  letter-spacing: 1px;
+ }
+}
+
+@media screen and (max-width:767px) {
+.About__title h2>span{
+  font-size: 33px;
+  letter-spacing: 1px;
+ }
 }
 
 .About__title br{
   display: none;
 }
 
+@media screen and (max-width: 767px) {
+.About__title br {
+ display: block;
+}
+}
+
 .About__title p{
+  display: inline-block;
   font-size: 16px;
   font-weight: 700;
   line-height: 26px;
   margin-top: 15px;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+.About__title p {
+  font-size: 16px;
+  line-height: 21px;
+ }
 }
 
 .About__button{
   width: 250px;
 }
 
-.About__button a{
-  transition:opacity 0.2s;
-  align-items: center;
-  border: none;
-  border-radius: 38px;
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  font-size: 16px;
-  font-weight:　700;
-  height: 64px;
-  justify-content: center;
-  text-decoration: none;
-  text-align: center;
-  width: 100%;
-  color: #F79214 !important;
-  background-color: #fff;
+.About__button a {
+ align-items: center;
+ border: none;
+ border-radius: 38pc;
+ cursor: pointer;
+ display: flex;
+ flex-direction: column;
+ font-size: 16px;
+ font-weight: 700;
+ height: 64px;
+ justify-content: center;
+ text-decoration: none;
+ text-align: center;
+ width: 100%;
+ color: #F79214 !important;
+ background-color: #fff;
 }
 
-.About__button{
-  width:250px;
+@media screen and (min-width: 768px){
+  .About__button a{
+      transition:opacity 0.2s;
+  }
 }
+
+.About__button a span:first-child{
+ font-family: 'Lato', sans-serif;
+ font-size: 24px;
+ font-weight: 700;
+ line-height: 32px;
+}
+
+.About__button a span:last-child{
+ font-size: 12px;
+ line-height: 18px;
+}
+
 
