@@ -1,17 +1,27 @@
 html {
-　-webkit-text-size-adjust: 100%;
-　display: block;
+  -webkit-font-smoothing: antialiased;
 }
 
 script{
   display: none;
 }
 
-＊,＊::before,＊::after{
-  word-break:break-all;
-  -webkit-box-sizing:border-box;
-  -moz-box-sizing:border-box;
-  box-sizing:border-box;
+body, div, p, ul, ol, li, dl, dt, dd, table, th, td, img, figure, h1, h2, h3, h4, h5, h6, form, select {
+  margin: 0;
+  padding: 0;
+}
+
+*, *::before, *::after{
+  word-break: break-all;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 767px) {
+ html{
+  font-size: 15px;
+ }
 }
 
 meta{
@@ -28,6 +38,11 @@ body{
   "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   font-size:14px;
   font-weight:500;
+}
+
+a{
+  color: #333333;
+  text-decoration:none;
 }
 
 .Header{
@@ -74,11 +89,6 @@ body{
   display:inline-flex;
 }
 
-a{
-  color: #333333;
-  text-decoration:none;
-}
-
 @media screen and (min-width: 768px){
   .HeaderLogo{
  transition: opacity 0.2s; 
@@ -105,6 +115,7 @@ img{
 .HeaderLogo__image--sp{
   display: none;
   height:16px;
+  width: auto;
 
 }
 
@@ -149,22 +160,32 @@ img{
   }
 }
 
+@media screen and (max-width: 1080px) {
+ .HeaderNavHamburger_line:first-child{
+  top: 0;
+ }
+}
+
+.HeaderNavHamburger_line:last-child{
+  top: 50%;
+  transform: translate(0, -50%) rotate(-45deg);
+  opacity: 1;
+ }
+
 @media screen and (max-width: 1080px){
   .HeaderNavHamburger__line:last-child{
     top:100%;
   }
 }
 
+ul, ol{
+  list-style: none;
+}
+
 .HeaderNavList{
   align-items:center;
   display:flex;
   justify-content:space-between;
-}
-
-@media screen and (max-width: 767px){
-  .HeaderNavList{
-  top:52px;    
-  }
 }
 
 @media screen and (max-width: 1080px){
@@ -185,9 +206,12 @@ img{
 }
 }
 
-ul, ol{
-  list-style: none;
+@media screen and (max-width: 767px){
+  .HeaderNavList{
+  top:52px;    
+  }
 }
+
 
 @media screen and (min-width: 768px){
   .HeaderNavListItem{
@@ -199,9 +223,27 @@ ul, ol{
   margin-right:45px;
 }
 
+@media screen and (max-width: 1080px) {
+.HeaderNavListItem{
+  margin-right: 0;
+ }
+}
+
+@media screen and (min-width:768px) {
+ .HeaderNavListItem{
+  transition: opacity 0.2s;
+ }
+}
+
 .HeaderNavListItem__link{
   display:block;
 } 
+
+@media screen and (max-width: 1080px){
+ .HeaderNavListItem_link{
+  padding: 20px 0;
+ }
+}
 
 .HeaderNavListItem__link>span{
   display: block;
@@ -254,12 +296,19 @@ main{
   display: block;
 }
 
+
+@media screen and (max-width: 1080px) {
+ main{
+  padding-top: 60px;
+ }
+}
+
 .FirstView{
   background-image:url(https://camp.potepan.com/wp-content/themes/potepancamp/assets/images/home/first-view/top-hero.jpg);
-  background-size: cover;
+  background-size:cover;
   background-position:center;
-  padding-top: 100px;
-  padding-bottom: 28px;
+  padding-top:100px;
+  padding-bottom:28px;
 }
 
 @media screen and (max-width: 767px){
@@ -287,6 +336,11 @@ main{
 img{
   border:0;
   vertical-align:middle;
+}
+
+body, div, p, ul, ol, li, dl, dt, dd, table, th, td, img, figure, h1, h2, h3, h4, h5, h6, form, select{
+  margin:0;
+  vertical-align:0;
 }
 
 .FirstView__container{
